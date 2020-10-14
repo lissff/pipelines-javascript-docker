@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lissffpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lissffpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lissffpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lissffpipelinesjavascriptdocker 
+          image: testtestabctest.azurecr.io/lissffpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
